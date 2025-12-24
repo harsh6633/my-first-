@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas, My Crush 🎄❄️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background: linear-gradient(180deg, #1e3c72 0%, #2a5298 50%, #0f2027 100%);
+            overflow: hidden;
+            color: white;
+            position: relative;
+        }
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 20px;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 3.5em;
+            color: #ff4757;
+            text-shadow: 0 0 20px #ff6b9d;
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ff6b9d; }
+            to { text-shadow: 0 0 30px #ff4757, 0 0 40px #ff6b9d; }
+        }
+        .snowman {
+            font-size: 100px;
+            margin: 40px 0;
+            animation: sway 3s ease-in-out infinite alternate;
+        }
+        @keyframes sway {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        .message {
+            font-size: 1.5em;
+            margin: 40px 0;
+            color: #ffeaa7;
+            line-height: 1.6;
+        }
+        .audio-container {
+            margin: 50px 0;
+        }
+        audio {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .lyrics {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-height: 300px;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+        .lights {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10px;
+            background: repeating-linear-gradient(90deg, #ff4757, #ffa502 10%, #2ed573 20%, #ff4757 30%);
+            animation: twinkle 1s infinite;
+            z-index: 5;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .heart {
+            font-size: 50px;
+            color: #ff6b9d;
+            animation: heartbeat 1.5s infinite;
+            margin: 20px;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="lights"></div>
+    <div id="snow-container"></div>
+    
+    <div class="content">
+        <h1>Merry Christmas! 🎅✨</h1>
+        <div class="snowman">☃️</div>
+        <p class="message">
+            Hey sanchii, this holiday magic reminds me of you—warm, sparkling, and impossible to forget. 
+            Made this just for you because you make every day feel like Christmas. ❤️
+        </p>
+        <div class="heart">💖</div>
+        
+        <div class="audio-container">
+    <iframe style="border-radius:20px"
+        src="https://open.spotify.com/embed/track/7uoFMmxln0GPXQ0AcCBXRq"
+        width="80%" height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+    <p style="margin-top: 10px; font-style: italic;">
+        🎶 Sia – Snowman ❄️
+    </p>
+</div>
+
+        
+        <div class="lyrics">
+            <strong>Showman Lyrics (by Shazam/Pyro Hits - Festive Vibes):</strong><br><br>
+            I'm the showman, lights flashin' bright<br>
+            Heart on fire, dancin' through the night<br>
+            You and me under Christmas skies<br>
+            Stealin' glances, no goodbyes<br><br>
+            🎄 Snowfall magic, your smile's the star<br>
+            Hold me close, we've come so far<br>
+            Showman lovin', can't let go<br>
+            Merry Christmas, let the feelings flow! 🎅<br><br>
+            *(Sing along and think of us 💕)*
+        </div>
+    </div>
+
+    <script>
+        // Snowfall animation
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄️';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            document.getElementById('snow-container').appendChild(snowflake);
+            setTimeout(() => snowflake.remove(), 5000);
+        }
+        setInterval(createSnowflake, 200);
+
+        // Personalize: Replace [Crush's Name] in message with their actual name
+    </script>
+</body>
+</html>
